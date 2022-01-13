@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <script>
+      {
+        // Object Freeze & seal
+        const person = {
+          firstName: "Arkun",
+          lastName: "Rifki",
+        };
+
+        //   Object.freeze(person); // Object terkena freeze maka object tidak bisa dihapus atau diganti
+        //   Object.seal(person); // Object terkena seal maka object tidak bisa dihapus tapi bisa diganti
+
+        person.firstName = "Islahutahrir";
+        delete person.lastName;
+
+        console.info(person);
+      }
+      {
+        // object assign
+        const target = {
+          firstName: "Arkun",
+        };
+        const source = {
+          lastName: "Rifki",
+        };
+        Object.assign(target, source);
+        console.info(target);
+        console.info(source);
+      }
+
+      {
+        // OBJECT PROPERTY name 7 value
+
+        // ini namanya object
+        const person = {
+          firstName: "Arkun",
+          lastName: "Rifki",
+        };
+
+        console.info(Object.values(person)); // Mendapatkan values di class
+        console.info(Object.getOwnPropertyNames(person)); //ambil Property
+      }
+    </script>
+  </body>
+</html>
