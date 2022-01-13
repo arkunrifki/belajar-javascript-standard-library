@@ -1,0 +1,7 @@
+{
+  "firstName": "Arkun",
+  "middlename": "Rifki",
+  "lastName": "Islahutahrir",
+  "address": { "country": "Indonesia", "city": "Purworejo" },
+  "hobbies": ["Coding", "Game", "BasketBall"]
+}

@@ -12,10 +12,21 @@
         firstName: "Arkun",
         middlename: "Rifki",
         lastName: "Islahutahrir",
+        // Object Nested
         address: {
           country: "Indonesia",
+          city: "Purworejo",
         },
+        hobbies: ["Coding", "Game", "BasketBall"],
       };
+
+      // Convert ke string JSON
+      const json = JSON.stringify(person);
+      console.info(json);
+
+      //Conversi ke JavaScript Object
+      const jsonObject = JSON.parse(json);
+      console.info(jsonObject);
     </script>
   </body>
 </html>
