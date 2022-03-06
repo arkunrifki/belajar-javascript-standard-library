@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goto</title>
+  </head>
+  <body>
+    <script>
+      function g(str) {
+        var i = 0;
+        var new_str = "";
+        while (i < str.length - 1) {
+          new_str = new_str + str[i + 1];
+          i = i + 1;
+        }
+        return new_str;
+      }
+      function f(str) {
+        if (str.length === 0) {
+          return "";
+        } else if (str.length === 1) {
+          return str;
+        } else {
+          return f(g(str)) + str[0];
+        }
+      }
+      function h(n, str) {
+        while (n != 1) {
+          if (n % 2 === 0) {
+            n = n / 2;
+          } else {
+            n = 3 * n + 1;
+          }
+          str = f(str);
+        }
+        return str;
+      }
+
+      function pow(x, y) {
+        if (y === 0) {
+          return 1;
+        } else {
+          return x * pow(x, y - 1);
+        }
+      }
+
+      const result = h(1, "fruits");
+      const result2 = h(2, "fruits");
+      const result3 = h(5, "fruits");
+
+      console.info(result);
+      console.info(result2);
+      console.info(result3);
+    </script>
+  </body>
+</html>

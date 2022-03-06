@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+  <head>
+    <title>Proxy</title>
+  </head>
+  <body>
+    <script>
+      const target = {};
+      const handler = {
+        get: function (target, property) {
+          return target[property];
+        },
+        set: function (target, property, value) {
+          terget[property] = value;
+        },
+      };
+      
+      const proxy = new Proxy(target, handler);
+      proxy.firstName = "Arkun";
+      proxy.lastName = "Rifki";
+
+      console.info(proxy.firstName);
+      console.info(proxy.lastName);
+      console.info(target);
+
+    </script>
+  </body>
+</html>
+
+<!-- Proxy masih belum paham -->
